@@ -47,7 +47,17 @@ Salin folder `skill/` ke direktori skills Hermes Agent target:
 # %LOCALAPPDATA%\hermes\skills\finance\hermes-mt5-copilot\SKILL.md
 ```
 
-### Langkah C: Pasang File EA di Terminal MT5
+### Langkah C: Auto-Install Cepat (Recommended)
+Cukup jalankan script installer otomatis yang sudah kami sediakan:
+```bash
+python auto_install.py
+```
+Script ini akan:
+1. Menginstall dependencies Python (`MetaTrader5`, `psutil`, `numpy`).
+2. Mendeteksi direktori MT5 secara otomatis dan menyalin file EA (`.ex5`/`.mq5`) ke folder `MQL5/Experts/` serta file presets ke `MQL5/Presets/`.
+3. Memasang skill `hermes-mt5-copilot` langsung ke direktori skills Hermes Agent target.
+
+Atau jika ingin pasang manual:
 1. Pindahkan file dari `mql5_ea/` ke:
    `<MT5_DATA_FOLDER>\MQL5\Experts\`
 2. Pindahkan file dari `presets/` ke:
